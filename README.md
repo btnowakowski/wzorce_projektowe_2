@@ -96,7 +96,7 @@ PrintBuffer "1" -- "*" PrintJob : zarządza >
 // Klasa: PrintJob
 // ---------------------------    
 
-     
+ ```    
 class PrintJob:
     atrybuty:
         job_id: int
@@ -110,13 +110,13 @@ class PrintJob:
 
     metoda __str__():
         zwróć "PrintJob[id=" + job_id + ", document='" + document_name + "', pages=" + pages + "]"
-
+```
 
 // ---------------------------
 // Klasa: PrintBuffer (Singleton)
 // ---------------------------    
 
-     
+```     
 class PrintBuffer:
     prywatne statyczne:
         instance: PrintBuffer ← NULL
@@ -155,12 +155,12 @@ class PrintBuffer:
 
         metoda listJobs() → lista<PrintJob>:
             zwróć kopię kolekcji jobs   // tak, by nie ujawniać wewnętrznej struktury
-
+```
 
 // ---------------------------
 // Przykładowy program główny (test)
 // ---------------------------     
-
+```
      
 funkcja main():
     // Pobieramy instancję bufora (Singleton)
@@ -199,7 +199,7 @@ funkcja main():
 // Uruchomienie programu:
 wywołaj main()
 
-
+```
 
 
 ## zadanie 3
@@ -289,7 +289,7 @@ Client --> IPizzaBuilder : korzysta z >
 // Produkt: Pizza
 // --------------------------------     
 
-     
+```
 class Pizza:
     atrybuty:
         dough: string
@@ -333,13 +333,13 @@ class Pizza:
         jeśli spices nie jest puste:
             opis += "\n  Przyprawy: " + join(", ", spices)
         zwróć opis
-
+```
 
 // --------------------------------
 // Interfejs: IPizzaBuilder
 // --------------------------------     
 
-     
+ ```    
 interface IPizzaBuilder:
     metoda Reset(): void
     metoda SetDough(dough: string): void
@@ -349,12 +349,12 @@ interface IPizzaBuilder:
     metoda AddSpice(spice: string): void
     metoda GetPizza() → Pizza
 
-
+```
 // --------------------------------
 // Implementacja: ConcretePizzaBuilder
 // --------------------------------     
 
-     
+```    
 class ConcretePizzaBuilder implements IPizzaBuilder:
     prywatne:
         pizza: Pizza
@@ -381,13 +381,13 @@ class ConcretePizzaBuilder implements IPizzaBuilder:
         gotowaPizza = pizza
         Reset()                           // zresetuj builder, aby nadać się do kolejnego użycia
         zwróć gotowaPizza
-
+```
 
 // --------------------------------
 // Kierownik (Director): Director
 // --------------------------------     
 
-     
+```     
 class Director:
     atrybut:
         builder: IPizzaBuilder
@@ -420,13 +420,13 @@ class Director:
         builder.AddVeggie("Pieczarki")
         builder.AddSpice("Oregano")
         builder.AddSpice("Czosnek w proszku")
-
+```
 
 // --------------------------------
 // Klient (Client / Program)
 // --------------------------------     
 
-     
+```     
 funkcja Main():
     // Tworzymy builder oraz przekazujemy go do Director
     builder = nowy ConcretePizzaBuilder()
@@ -458,5 +458,5 @@ funkcja Main():
     customVeggie = builder.GetPizza()
     wyświetl "=== Pizza Wegetariańska (niestandardowa) ==="
     wyświetl customVeggie.Describe()
-
+```
 Koniec pseudokodu.
