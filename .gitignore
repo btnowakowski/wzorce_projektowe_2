@@ -1,0 +1,73 @@
+# =========================
+# Visual Studio / .NET
+# =========================
+
+## Ignore build output directories
+**/bin/
+**/obj/
+
+## Rider projects
+.idea/
+*.sln.iml
+
+## User-specific files (per developer / per machine)
+*.user
+*.userosscache
+*.suo
+*.sln.docstates
+
+## NuGet packages and related
+*.nupkg
+*.snupkg
+packages/
+
+## Rider or ReSharper
+*.DotSettings.user
+_ReSharper*/
+*.[Rr]e[Ss]harper
+
+## DotCover
+*.dotCover
+
+# =========================
+# VS Code
+# =========================
+
+.vscode/
+
+# =========================
+# Editor / OS artifacts
+# =========================
+
+## macOS
+.DS_Store
+
+## Windows
+Thumbs.db
+
+## Log files
+*.log
+
+# =========================
+# Build / Deployment Outputs
+# =========================
+
+# Binary files
+*.dll
+*.exe
+*.pdb
+*.cache
+
+# IIS Temporary files
+aspnet/Temp/
+
+# =========================
+# Optional / Miscellaneous
+# =========================
+
+# Packages directory (if using Paket, npm, etc.)
+# /packages/
+# /node_modules/
+
+# Visual Studio Code workspace storage
+.history/
