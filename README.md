@@ -61,7 +61,6 @@ Poniżej znajduje się diagram UML przedstawiający strukturę oraz relacje pomi
 ### UML Diagram
 
 ```uml
-@startuml
 '----------------------------
 ' Klasa: PrintJob
 '----------------------------
@@ -89,7 +88,7 @@ class PrintBuffer {
 
 ' Relacja: PrintBuffer zawiera wiele PrintJob (kolekcja)
 PrintBuffer "1" -- "*" PrintJob : zarządza >
-@enduml
+```
 
 
 
