@@ -16,7 +16,7 @@
 
 
 pseudokod:
-
+```
 class Logger {
     private static Logger instance;
     private List<string> logs;
@@ -41,7 +41,7 @@ class Logger {
         return logs;
     }
 }
-
+```
 
 ## zadanie 2
 
@@ -94,7 +94,9 @@ PrintBuffer "1" -- "*" PrintJob : zarządza >
 
 // ---------------------------
 // Klasa: PrintJob
-// ---------------------------
+// ---------------------------    
+
+     
 class PrintJob:
     atrybuty:
         job_id: int
@@ -112,7 +114,9 @@ class PrintJob:
 
 // ---------------------------
 // Klasa: PrintBuffer (Singleton)
-// ---------------------------
+// ---------------------------    
+
+     
 class PrintBuffer:
     prywatne statyczne:
         instance: PrintBuffer ← NULL
@@ -155,7 +159,9 @@ class PrintBuffer:
 
 // ---------------------------
 // Przykładowy program główny (test)
-// ---------------------------
+// ---------------------------     
+
+     
 funkcja main():
     // Pobieramy instancję bufora (Singleton)
     buffer1 ← PrintBuffer.getInstance()
@@ -281,7 +287,9 @@ Client --> IPizzaBuilder : korzysta z >
 
 // --------------------------------
 // Produkt: Pizza
-// --------------------------------
+// --------------------------------     
+
+     
 class Pizza:
     atrybuty:
         dough: string
@@ -329,7 +337,9 @@ class Pizza:
 
 // --------------------------------
 // Interfejs: IPizzaBuilder
-// --------------------------------
+// --------------------------------     
+
+     
 interface IPizzaBuilder:
     metoda Reset(): void
     metoda SetDough(dough: string): void
@@ -342,7 +352,9 @@ interface IPizzaBuilder:
 
 // --------------------------------
 // Implementacja: ConcretePizzaBuilder
-// --------------------------------
+// --------------------------------     
+
+     
 class ConcretePizzaBuilder implements IPizzaBuilder:
     prywatne:
         pizza: Pizza
@@ -373,7 +385,9 @@ class ConcretePizzaBuilder implements IPizzaBuilder:
 
 // --------------------------------
 // Kierownik (Director): Director
-// --------------------------------
+// --------------------------------     
+
+     
 class Director:
     atrybut:
         builder: IPizzaBuilder
@@ -410,7 +424,9 @@ class Director:
 
 // --------------------------------
 // Klient (Client / Program)
-// --------------------------------
+// --------------------------------     
+
+     
 funkcja Main():
     // Tworzymy builder oraz przekazujemy go do Director
     builder = nowy ConcretePizzaBuilder()
