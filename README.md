@@ -197,8 +197,7 @@ wywołaj main()
 
 
 ## zadanie 3
-
-@startuml
+```
 '========================
 ' Diagram UML – Builder
 '========================
@@ -274,9 +273,7 @@ Pizza <-- ConcretePizzaBuilder : tworzy >
 Director --> IPizzaBuilder : używa >
 Client --> Director : korzysta z >
 Client --> IPizzaBuilder : korzysta z >
-
-@enduml
-
+```
 
 
 
